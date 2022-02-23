@@ -1,5 +1,5 @@
 # pip install Flask 
-
+# run 
 from flask import Flask, jsonify, request
 app = Flask(__name__)
 app.config["DEBUG"] = True
@@ -21,5 +21,5 @@ def gcd():
     variableB = int(request.args.get('b'))
     variableResult = gcd_euclides(variableA, variableB)
     return jsonify(variableResult)
-
+    
 app.run()
