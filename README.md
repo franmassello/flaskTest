@@ -16,7 +16,7 @@ API REST hecha con Python la cual se encarga de calcular el gcd (greatest common
 
 # Como usar la API
 - Es necesario tener Python 3.7 o mayor
-- PyCharm o VSCode
+- Editor de codigo VSCode o PyCharm 
 - Bajar el repo usando git clone https://github.com/franmassello/flaskTest.git
 - Hacer pip install Flask
 - Correr el archivo main.py
