@@ -1,5 +1,4 @@
-# pip install Flask, marshmallow, 
-# run 
+
 from flask import Flask, jsonify, request, abort
 from functions.gcd_euclides import gcd_euclides
 
@@ -36,10 +35,9 @@ if __name__ == '__main__':
 
 
 
-
-
-
-""" @app.route('/', methods=['GET'])
+"""
+Diseño en flask puro sin flask-restful
+@app.route('/', methods=['GET'])
 def home():
     variableTest = "Hello World"
     return variableTest
