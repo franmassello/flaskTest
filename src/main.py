@@ -1,14 +1,10 @@
 # pip install Flask 
 # run 
 from flask import Flask, jsonify, request
+from functions.gcd_euclides import gcd_euclides
+
 app = Flask(__name__)
 app.config["DEBUG"] = True
-
-def gcd_euclides(a, b):
-    if b == 0:
-        return a
-    else:
-        return gcd_euclides(b, a % b)
 
 @app.route('/', methods=['GET'])
 def home():
