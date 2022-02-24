@@ -1,12 +1,45 @@
-# pip install Flask 
+# pip install Flask, marshmallow, 
 # run 
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from functions.gcd_euclides import gcd_euclides
+
+from flask_restful import Resource, Api
+from marshmallow import Schema, fields
 
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-@app.route('/', methods=['GET'])
+class BarQuerySchema(Schema):
+    A = fields.Str(required=True)
+    B = fields.Str(required=True)
+
+app = Flask(__name__)
+api = Api(app)
+schema = BarQuerySchema()
+
+class GCD(Resource):
+    def get(self):
+        errors = schema.validate(request.args)
+        if errors:
+            abort(400, str(errors))
+        return jsonify(gcd_euclides(int(request.args["A"]), int(request.args["B"])))
+
+api.add_resource(GCD, '/gcd', endpoint='gcd')
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+
+
+
+
+
+
+
+
+
+
+""" @app.route('/', methods=['GET'])
 def home():
     variableTest = "Hello World"
     return variableTest
@@ -18,4 +51,4 @@ def gcd():
     variableResult = gcd_euclides(variableA, variableB)
     return jsonify(variableResult)
     
-app.run()
+app.run() """
