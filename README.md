@@ -27,7 +27,7 @@ API REST hecha con Python la cual se encarga de calcular el gcd (greatest common
 - /flaskTest
   - /src
     - /functions
-      -gcd_euclides.py
+      - gcd_euclides.py
     - main.py
   - /tests
   - Entrevista backend - Pipet.pdf
