@@ -12,16 +12,19 @@ API REST hecha con Python la cual se encarga de calcular el gcd (greatest common
 - Python
 - Flask
 - Flask-Restful
-- Unittest
+- Pytest
 
 # Como usar la API
 - Es necesario tener Python 3.7 o mayor
 - Editor de codigo VSCode o PyCharm 
 - Bajar el repo usando git clone https://github.com/franmassello/flaskTest.git
-- Hacer pip install Flask, marshmallow, flask_restful
+- Hacer pip install Flask, marshmallow, flask_restful, pytest
 - Correr el archivo main.py
 
 # Testing
+- pytest en /flasktest
+
+
 # Documentacion API Postman
 # Estructura de codigo
 - /flaskTest

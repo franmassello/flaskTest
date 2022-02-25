@@ -8,20 +8,18 @@ from marshmallow import Schema, fields
 app = Flask(__name__)
 app.config["DEBUG"] = True
 
-class BarQuerySchema(Schema):
-    A = fields.Str(required=True)
-    B = fields.Str(required=True)
+#class BarQuerySchema(Schema):
+#    A = fields.Str(required=True)
+#    B = fields.Str(required=True)
 
 app = Flask(__name__)
 api = Api(app)
-schema = BarQuerySchema()
+#schema = BarQuerySchema()
 
 class GCD(Resource):
     def get(self):
-        errors = schema.validate(request.args)
-        if errors:
-            abort(400, str(errors))
-        return jsonify(gcd_euclides(request.args["A"], request.args["B"]))
+        resultado_funcion = {"resultado" : gcd_euclides(request.args["A"], request.args["B"])}
+        return jsonify(resultado_funcion)
 
 api.add_resource(GCD, '/gcd', endpoint='gcd')
 
