@@ -26,6 +26,7 @@ API REST hecha con Python la cual se encarga de calcular el gcd (greatest common
 
 
 # Documentacion API Postman
+https://documenter.getpostman.com/view/19198278/UVkpQGdB
 # Estructura de codigo
 - /flaskTest
   - /src
