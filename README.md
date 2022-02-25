@@ -34,6 +34,7 @@ https://documenter.getpostman.com/view/19198278/UVkpQGdB
       - gcd_euclides.py Archivo donde se define la funcion principal de la API
     - main.py Archivo principal de la API
   - /tests
-    - test.py Archivo principal de tests
+    - test_functions.py Archivo donde se testea la funcion principal
+    - test_routes.py Archivo donde se testea que ande toda la aplicacion de Flask
   - Entrevista backend - Pipet.pdf
   - README.md
