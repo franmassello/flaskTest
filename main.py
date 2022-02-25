@@ -15,16 +15,22 @@ app.config["DEBUG"] = True
 app = Flask(__name__)
 api = Api(app)
 #schema = BarQuerySchema()
-
+port = 5000
 class GCD(Resource):
     def get(self):
         resultado_funcion = {"resultado" : gcd_euclides(request.args["A"], request.args["B"])}
         return jsonify(resultado_funcion)
 
+class Test(Resource):
+    def get(self):
+        objeto_response = {"Resultado" : "OK", "URL" : request.base_url}
+        return objeto_response
+
+api.add_resource(Test, "/test")
 api.add_resource(GCD, '/gcd', endpoint='gcd')
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host="0.0.0.0", port=port)
 
 
 
