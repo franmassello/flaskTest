@@ -21,7 +21,7 @@ class GCD(Resource):
         errors = schema.validate(request.args)
         if errors:
             abort(400, str(errors))
-        return jsonify(gcd_euclides(int(request.args["A"]), int(request.args["B"])))
+        return jsonify(gcd_euclides(request.args["A"], request.args["B"]))
 
 api.add_resource(GCD, '/gcd', endpoint='gcd')
 
