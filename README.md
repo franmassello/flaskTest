@@ -27,7 +27,7 @@ SIN DOCKER:
 - "pip install -r requirements.txt" para instalar todas las librerias en el entorno
 - "python main.py" para correr la API 
 De esta manera tendriamos corriendo la API en nuestro localhost, mientras se siga ejecutando la terminal.
-Para ver como usar docker hacer click aqui
+Para ver como usar docker bajar hacia el ultimo subtema
 
 # Testing
 Los tests en esta API son dos archivos, en uno se testea la funcion gdc_euclides y en el otro archivo se testea el funcionamiento de la API.
