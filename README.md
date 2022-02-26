@@ -21,8 +21,11 @@ SIN DOCKER:
 - Es necesario tener Python 3.7 o mayor
 - Editor de codigo VSCode o PyCharm 
 - Bajar el repo usando git clone https://github.com/franmassello/flaskTest.git
-- Hacer pip install requirements.txt
-- Correr el archivo main.py
+- Hacer "pip install virtualenv"
+- "virtualenv flasktest" para crear el entorno virtual
+- "flasktest\Scripts\activate" para activar el entorno virtual
+- "pip install -r requirements.txt" para instalar todas las librerias en el entorno
+- "python main.py" para correr la API 
 De esta manera tendriamos corriendo la API en nuestro localhost, mientras se siga ejecutando la terminal.
 Para ver como usar docker hacer click aqui
 
